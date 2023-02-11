@@ -1,0 +1,89 @@
+body {
+  background-color: #1e1e2b;
+}
+.pin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+input[type="text"] {
+  display: none;
+}
+
+#buttons {
+    display: flex;
+    font-family: Helvetica;
+    font-weight: 600;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 310px;
+  }
+  
+  .button {
+    border: 2px solid #07ffe6;
+    border-radius: 15px;
+    color: #07ffe6;
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    height: 80px;
+    line-height: 80px;
+    margin: 9px;
+    text-align: center;
+    width: 80px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  #btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40%;
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #ffedd3;
+    text-transform: uppercase;
+    position: relative;
+    transition: .5s ease;
+  }
+  
+  #btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ffc506;
+    transition: .5s ease;
+  }
+  
+  #btn:hover {
+    color: #1e1e2b;
+    transition-delay: .5s;
+  }
+  
+  #btn:hover::before {
+    width: 100%;
+  }
+  
+  #btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #ffc506;
+    transition: .4s ease;
+    z-index: -1;
+  }
+  
+  #btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+  }
